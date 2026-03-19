@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -39,19 +43,64 @@ h1{
 
 .container{
     display: flex;
+    position: relative;
     gap: 20px;
-    
-    margin: 0 auto;
+    margin: 0 auto 0.5em;
+    border-bottom: 1px solid #D2D2D2;
     
 }
 .ingredients{
     color: #8B8B8B;
+    font-size: 1.25rem;
 }
 .increment{
     align-self: center;
-    padding: 1em;
+    padding: 1.25em;
     font-size: 1em;
+    margin-left: auto;
     border: 2px solid;
     background: #ffffff;
     border-radius: 50%;
+
+}
+
+.content{
+    margin-top: 1em;
+    width: 70%;
+    margin: 1em auto 0;
+}
+
+.increment:focus,
+.increment:hover{
+    color: #fff;
+    border: #8B8B8B;
+    background: #1e211f;
+}
+
+.details{
+    display: block ;
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+#form-head{
+    font-size: 1rem;
+}
+
+form{
+    background: #1e211f;
+    width: 50%;
+    padding: 2em 1em;
+    margin: 0 auto;
+    
+}
+
+.card-details{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
