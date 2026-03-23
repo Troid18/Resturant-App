@@ -130,3 +130,45 @@ form{
     font-size: 1em;
     font-weight: 800;
 }
+
+.order-container{
+    border: 1px solid #D2D2D2;
+    border-radius: 8px;
+    padding: 1rem;
+    max-width: 400px;
+    margin: 0.5rem auto;
+    background: #fff;
+}
+
+.order-detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.order-detail:last-child{
+    border-bottom: none;
+}
+
+.order-price{
+    font-weight: 700;
+}
+
+.remove{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.remove-btn{
+    border: none;
+    background: none;
+    color: #d15353;
+    cursor: pointer;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+}
