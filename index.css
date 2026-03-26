@@ -172,3 +172,9 @@ form{
     font-size: 0.95rem;
     text-transform: uppercase;
 }
+
+.total-order{
+
+    display: flex;
+    justify-content: space-between;
+}

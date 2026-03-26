@@ -32,6 +32,10 @@ function renderOrder(){
         return
     }
 
+    const addTotal = orderDetails.reduce((total,item) =>{
+        return total + item.price
+    },0)
+
     const itemsHtml = orderDetails.map((order, index) => {
         return `
             <div class="order-detail" data-index="${index}">
@@ -40,6 +44,7 @@ function renderOrder(){
                     <button class="remove-btn" data-index="${index}" type="button">remove</button>
                 </div>
                 <h3 class="order-price">$${order.price}</h3>
+                
             </div>`
     }).join("")
 
@@ -47,6 +52,10 @@ function renderOrder(){
         <div class="order-container">
             <h1 class="order-head">Your order</h1>
             ${itemsHtml}
+            <div class="total-order"> 
+                    <h2>Total</h2>
+                    <h3>$${addTotal}</h3>
+            </div>
         </div>`
 }
 
