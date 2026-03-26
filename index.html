@@ -16,7 +16,7 @@
         <div class="head-info">
             <h1>Troid Resturant</h1>
             <p>The best burgers and pizzas in town</p>
-
+            
         </div>
         
     </header>
@@ -36,8 +36,8 @@
                 <h1 id="form-head">Enter card details</h1>
                 <input type="text" aria-label="Enter your name" placeholder="Enter your name" class="details" required title="Please enter your name">
                 <input type="text" aria-label="Enter your card number" placeholder="Enter your card number" class="details" required title="please enter your card number">
-                <input type="text" aria-label="Enter your name" placeholder="Enter your CVV" class="details" required title="Please enter your CCV" min="3" max="3">
-                <button type="submit" class="pay-btn" id="pay-btn">Pay</button>
+                <input type="text" aria-label="Enter your name" placeholder="Enter your CVV" class="details" required title="Please enter your CCV" maxlength="3" pattern="[0-9]{3}">
+                <button type="submit" class="pay-btn" id="pay-btn">Pay</button>          
             </form>
 
         </section>

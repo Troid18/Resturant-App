@@ -189,3 +189,10 @@ form{
     font-size: 1rem;
     cursor: pointer;
 }
+
+.loading-btn{
+    border: 1px solid #fff;
+    width: 20%;
+    display: block;
+    margin: 0 auto;
+}

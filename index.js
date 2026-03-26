@@ -1,6 +1,7 @@
 import { menuArray } from "./data.js"
 
 const contentContainer = document.getElementById("content")
+const formDetails = document.getElementById("card-details")
 const orderSummary = document.getElementById("order-summary")
 
 let orderDetails = []
@@ -85,10 +86,24 @@ orderSummary.addEventListener("click", function(e){
 
     if (e.target.id === "checkout-btn") {
         setTimeout(() => {
-            const formDetails = document.getElementById("card-details")
             formDetails.style.display = "flex"
         }, 2000);
-        orderDetails = []
-        renderOrder()
+
+        if(e.target.id === "pay-btn"){
+            setTimeout((e) => {
+                e.preventDefault()
+                const load = document.getElementById("pay-btn")
+                load.innerHTML = `<img src="./images\fade-stagger-circles.svg" alt="loading svg" class="loadng-btn"`
+            }, 3000);
+
+            setTimeout(() => {
+            formDetails.style.display = "none"
+            orderDetails = []
+            renderOrder()
+        }, 5000);
+        }
+
+        
+        
     }
 })
