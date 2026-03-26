@@ -43,7 +43,7 @@ function renderOrder(){
                     <h2>${order.name}</h2>
                     <button class="remove-btn" data-index="${index}" type="button">remove</button>
                 </div>
-                <h3 class="order-price">$${order.price}</h3>
+                <h3 class="order-price">$${order.price.toFixed(2)}</h3>
                 
             </div>`
     }).join("")
@@ -53,10 +53,12 @@ function renderOrder(){
             <h1 class="order-head">Your order</h1>
             ${itemsHtml}
             <div class="total-order"> 
-                    <h2>Total</h2>
-                    <h3>$${addTotal}</h3>
+                <h2>Total</h2>
+                <h3>$${addTotal.toFixed(2)}</h3>
             </div>
-        </div>`
+            <button id="checkout-btn" type="button">Complete Order</button>
+        </div>
+    `
 }
 
 render()
@@ -78,6 +80,15 @@ orderSummary.addEventListener("click", function(e){
         const idx = Number(e.target.dataset.index)
         orderDetails.splice(idx, 1)
         renderOrder()
+        return
+    }
 
+    if (e.target.id === "checkout-btn") {
+        setTimeout(() => {
+            const formDetails = document.getElementById("card-details")
+            formDetails.style.display = "flex"
+        }, 2000);
+        orderDetails = []
+        renderOrder()
     }
 })

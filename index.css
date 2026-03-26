@@ -178,3 +178,14 @@ form{
     display: flex;
     justify-content: space-between;
 }
+
+#checkout-btn{
+    padding: 1em;
+    width: 100%;
+    background: #16db99;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
