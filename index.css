@@ -108,7 +108,7 @@ form{
 }
 
 .card-details{
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -193,6 +193,7 @@ form{
 .loading-btn{
     border: 1px solid #fff;
     width: 20%;
+    height: 30%;
     display: block;
     margin: 0 auto;
 }

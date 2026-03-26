@@ -1,10 +1,13 @@
 import { menuArray } from "./data.js"
 
+const payBtn = document.getElementById("pay-btn")
 const contentContainer = document.getElementById("content")
 const formDetails = document.getElementById("card-details")
 const orderSummary = document.getElementById("order-summary")
 
 let orderDetails = []
+
+
 
 function render(){
     let renderHtml = ""
@@ -89,21 +92,29 @@ orderSummary.addEventListener("click", function(e){
             formDetails.style.display = "flex"
         }, 2000);
 
-        if(e.target.id === "pay-btn"){
-            setTimeout((e) => {
-                e.preventDefault()
-                const load = document.getElementById("pay-btn")
-                load.innerHTML = `<img src="./images\fade-stagger-circles.svg" alt="loading svg" class="loadng-btn"`
-            }, 3000);
-
-            setTimeout(() => {
-            formDetails.style.display = "none"
-            orderDetails = []
-            renderOrder()
-        }, 5000);
-        }
 
         
         
     }
 })
+
+payBtn.addEventListener("click", function(e){
+
+    e.preventDefault()
+    payBtn.style.background = 'none'
+    payBtn.innerHTML = `<img src="./images/fade-stagger-circles.svg" alt="Loading svg" class="pay-btn">`
+    
+
+    setTimeout(() => {
+    formDetails.style.display = "none"
+    alert("Order completed!")
+    orderDetails = []
+    renderOrder()
+}, 5000);
+    
+
+
+
+}
+)
+
