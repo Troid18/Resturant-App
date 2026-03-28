@@ -117,7 +117,7 @@ orderSummary.addEventListener("click", function(e){
 payBtn.addEventListener("click", function(e){
     e.preventDefault()
     payBtn.style.background = 'none'
-    payBtn.innerHTML = `<img src="./images/fade-stagger-circles.svg" alt="Loading svg" class="pay-btn">`
+    payBtn.innerHTML = `<img src="./images/fade-stagger-circles.svg" alt="Loading svg" class="loading-btn">`
     
 
     setTimeout(() => {
