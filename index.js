@@ -7,6 +7,7 @@ const orderSummary = document.getElementById("order-summary")
 const nameInput = document.getElementById("name-input")
 const cardInput = document.getElementById("card-input")
 const cvvInput = document.getElementById("cvv-input")
+const formData = document.getElementById("form-details")
 
 let orderDetails = []
 
@@ -122,9 +123,17 @@ payBtn.addEventListener("click", function(e){
 
     setTimeout(() => {
     formDetails.style.display = "none"
-    alert("Order completed!")
     orderDetails = []
     renderOrder()
-}, 5000);
+    const formInfo = new FormData(formData)
+    const name = formInfo.get("username")
+
+    orderSummary.innerHTML = `  <div class="outro">
+                                    <p class="message"> Thanks ${name}! Your order is on its way!</p>
+                                </div>
+                                `
+    }, 5000);
+
+    
 })
 

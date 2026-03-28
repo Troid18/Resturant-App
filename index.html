@@ -33,15 +33,16 @@
         </section>
         
         <section class="card-details" id="card-details">
-            <form class="form-details">
+            <form class="form-details" id="form-details">
                 <h1 id="form-head">Enter card details</h1>
-                <input type="text" aria-label="Enter your name" placeholder="Enter your name" class="details" required id="name-input" title="Please enter your name">
+                <input type="text" aria-label="Enter your name" placeholder="Enter your name" class="details" required id="name-input" title="Please enter your name" name="username">
                 <input type="text" aria-label="Enter your card number" placeholder="Enter your card number" class="details" id="card-input" required title="Please enter your card number" maxlength="19" oninput="formatCardNumber()">
                 <input type="text" aria-label="Enter your CVV" placeholder="Enter your CVV" class="details" required id="cvv-input" title="Please enter your CVV" maxlength="3" pattern="[0-9]{3}">
                 <button type="submit" class="pay-btn" id="pay-btn" disabled>Pay</button>          
             </form>
 
         </section>
+        
         
 
     </main>
