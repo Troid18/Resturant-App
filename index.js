@@ -132,6 +132,10 @@ payBtn.addEventListener("click", function(e){
                                     <p class="message"> Thanks ${name}! Your order is on its way!</p>
                                 </div>
                                 `
+    formData.reset()
+    payBtn.innerHTML = "Pay"
+    payBtn.disabled = true
+    payBtn.style.background = ''
     }, 5000);
 
     
