@@ -4,8 +4,24 @@ const payBtn = document.getElementById("pay-btn")
 const contentContainer = document.getElementById("content")
 const formDetails = document.getElementById("card-details")
 const orderSummary = document.getElementById("order-summary")
+const nameInput = document.getElementById("name-input")
+const cardInput = document.getElementById("card-input")
+const cvvInput = document.getElementById("cvv-input")
 
 let orderDetails = []
+
+
+
+function checkFormValidity() {
+    const name = nameInput.value.trim()
+    const card = cardInput.value.trim()
+    const cvv = cvvInput.value.trim()
+    payBtn.disabled = !(name && card && cvv)
+}
+
+nameInput.addEventListener('input', checkFormValidity)
+cardInput.addEventListener('input', checkFormValidity)
+cvvInput.addEventListener('input', checkFormValidity)
 
 
 
@@ -99,7 +115,6 @@ orderSummary.addEventListener("click", function(e){
 })
 
 payBtn.addEventListener("click", function(e){
-
     e.preventDefault()
     payBtn.style.background = 'none'
     payBtn.innerHTML = `<img src="./images/fade-stagger-circles.svg" alt="Loading svg" class="pay-btn">`
@@ -111,10 +126,5 @@ payBtn.addEventListener("click", function(e){
     orderDetails = []
     renderOrder()
 }, 5000);
-    
-
-
-
-}
-)
+})
 

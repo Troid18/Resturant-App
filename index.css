@@ -99,6 +99,7 @@ h1{
 }
 
 form{
+    max-width: 400px;
     background: #ffffff;
     box-shadow: 0 2px 3px #000;
     width: 50%;
@@ -108,7 +109,7 @@ form{
 }
 
 .card-details{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -168,7 +169,7 @@ form{
     border: none;
     background: none;
     color: #d15353;
-    cursor: pointer;
+     
     font-size: 0.95rem;
     text-transform: uppercase;
 }
@@ -179,6 +180,10 @@ form{
     justify-content: space-between;
 }
 
+button{
+    cursor: pointer;
+}
+
 #checkout-btn{
     padding: 1em;
     width: 100%;
@@ -187,7 +192,7 @@ form{
     color: #ffffff;
     font-weight: 600;
     font-size: 1rem;
-    cursor: pointer;
+     
 }
 
 .loading-btn{

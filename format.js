@@ -1,4 +1,4 @@
-const cardNumberInput = document.getElementById("cardNumber")
+const cardNumberInput = document.getElementById("card-input")
 
 
 function formatCardNumber() {
